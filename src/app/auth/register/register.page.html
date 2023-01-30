@@ -1,0 +1,70 @@
+<ion-header>
+  <!-- <app-navbar></app-navbar> -->
+</ion-header>
+
+<ion-content>
+  <div class="container-fluid  contenedor">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-6">
+          <div class="contenedorImg">
+            <img src="assets/img/registro.png" alt="registro">
+            <!-- <img src="assets/img/rostro.png" alt="registro"> -->
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="indicaciones">
+            <h1 class="titulo-form" align="center">Registro</h1>
+            <!-- <p class="text-body1">¿Eres un usuario nuevo?</p>
+          <p class="text-body1">Rellena el siguiente formulario para formar parte de la familia</p> -->
+          </div>
+
+          <form class="formulario" [formGroup]="miFormulario">
+            <div class="row">
+              <div class="col-6">
+                <input type="text" formControlName="nombres" class="usuario" placeholder="Nombre del usuario">
+                <span class="form-text text-danger" *ngIf="campoValido('nombres')">Campo requerido</span>
+              </div>
+              <div class="col-6">
+                <input type="text" formControlName="area" class="usuario" placeholder="Area designada">
+                <span class="form-text text-danger" *ngIf="campoValido('area')">Campo requerido</span>
+              </div>
+
+              <div>
+                <input type="email" formControlName="username" class="email" placeholder="Correo electronico del usuario"
+                  [pattern]="emailCheck">
+                <span *ngIf="emailReq()" class="form-text text-danger">Dirección de correo no válida</span>
+                <span *ngIf="emailPattern()" class="form-text text-danger">Patrón incorrecto</span>
+              </div>
+
+              <div class="col-6">
+                <input type="password" formControlName="password" class="pass" placeholder="Ingrese contraseña">
+                <span class="form-text text-danger" *ngIf="campoValido('password')">Campo requerido</span>
+              </div>
+              <div class="col-6">
+                <input type="password" formControlName="password" class="pass" placeholder="Confirmar contraseña">
+                <span class="form-text text-danger" *ngIf="campoValido('password')">Campo requerido</span>
+              </div>
+
+              <div>
+                <input type="tel" formControlName="telefono" class="nTel" placeholder="Numero Telefonico">
+                <span class="form-text text-danger" *ngIf="campoValido('telefono')">Campo requerido</span>
+              </div>
+              <!-- <input type="number" formControlName="edad" class="edad" placeholder="Edad">
+          <span class="form-text text-danger" *ngIf="campoValido('edad')">Campo requerido</span> -->
+              <div class="botones">
+                <button *ngIf="miFormulario.invalid" disabled class="btn btn-primario">Registrarte</button>
+                <button *ngIf="miFormulario.valid" type="sumbit" class="btn btn-primario"
+                  (click)="save()">Registrarte</button>
+                <p class="text-body1 btn">¿Ya tienes cuenta? <a [routerLink]="['/login']" class="btn-terciario">Inicia
+                    sesion</a></p>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

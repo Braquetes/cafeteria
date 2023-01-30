@@ -1,0 +1,37 @@
+<ion-header>
+  <!-- <app-navbar></app-navbar> -->
+</ion-header>
+
+<ion-content>
+  <div class="container-fluid  contenedor">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-6">
+          <div class="contenedorImg">
+            <img src="assets/img/iniciarSesion.png" alt="recuperarCodigo">
+            <!-- <img src="assets/img/rostro.png" alt="recuperarCodigo"> -->
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="interfaz">
+            <div class="indicaciones">
+              <h2 class="titulo-form-h2" align="center">Ingresa el Código</h2>
+              <p class="text-body1">Ingresa el código de recuperación que reibiste en tu coreo</p>
+            </div>
+            <form class="formulario" [formGroup]="miFormulario">
+              <input type="number" class="input pass " placeholder="* * * * * *" formControlName="username">
+              <span class="form-text text-danger" *ngIf="campoValido('username')">Campo requerido</span>
+              <div class="botones">
+                <button *ngIf="miFormulario.invalid" disabled class="btn btn-primario">Enviar</button>
+                <button *ngIf="miFormulario.valid" type="sumbit" class="btn btn-primario" (click)="save()"> INICIAR
+                  SESIÓN</button>
+                <p class="text-body1 btn">¿No recibiste el codigo? <a [routerLink]="['/register']"
+                    class="btn-terciario">Reenviar</a> </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

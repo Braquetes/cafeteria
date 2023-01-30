@@ -1,17 +1,62 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="navTabs">
+    <div>
+      <ion-tab-button>
+        <ion-avatar>
+          <!-- <img src="assets/img/iniciarSesion.png" alt="iniciarSesion"> -->
+          <img src="assets/img/rostroP.png" alt="iniciarSesion">
+        </ion-avatar>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab1">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab2">
+        <ion-icon name="notifications-outline"></ion-icon>
+        <span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">1</span>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab3">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-tab-button>
+    </div>
+</div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content>
+  <div align="center">
+    <ion-text>Areas</ion-text>
+    <hr>
+  </div>
+  <div class="container-fluid contenedor">
+    <div class="col-12">
+      <div class="row" align="center">
+        <div class="col-4 cardV">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title class="cardT" [routerLink]="['/tabs/tab2']">Pedidos</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </div>
+        <div class="col-4 cardV">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title class="cardT">Terminados</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </div>
+        <div class="col-4 cardV">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title class="cardT">Historial</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

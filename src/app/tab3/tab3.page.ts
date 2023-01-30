@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  usuario = {
+    nombres: 'Diego',
+    apellidos: 'Hernandez',
+    username: 'diego@gmail.com',
+    password: '********',
+    telefono: '9511976397',
+    edad: 21
+  };
+
   constructor() {}
 
 }
