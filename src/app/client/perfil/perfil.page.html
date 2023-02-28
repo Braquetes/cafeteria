@@ -1,0 +1,54 @@
+<ion-header>
+  <div class="navTabs">
+    <div>
+      <ion-tab-button>
+        <ion-avatar>
+          <!-- <img src="assets/img/iniciarSesion.png" alt="iniciarSesion"> -->
+          <img src="assets/img/rostroP.png" alt="iniciarSesion">
+        </ion-avatar>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button [routerLink]="['/tabs/tab1']">
+        <!-- <ion-icon name="home-outline"></ion-icon> -->
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+    </div>
+    <!-- <div>
+      <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+        <span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">1</span>
+        <ion-title>Pedidos</ion-title>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+        <ion-title>Terminado</ion-title>
+      </ion-tab-button>
+    </div> -->
+    <div [routerLink]="['/perfil']">
+      <ion-tab-button>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-tab-button>
+    </div>
+</div>
+</ion-header>
+
+<ion-content>
+  <div class="contenedor">
+    <h1>Perfil</h1>
+    <div class="col-12">
+      <div class="row">
+        <div class="col-3">
+          <img src="assets/img/user.png" alt="ser" class="img">
+        </div>
+        <div class="col-9">
+            <div class="grid">
+              <div>Nombre Completo: {{usuario.nombres}}</div>
+              <div>Correo: {{usuario.email}}</div>
+              <div>Contraseña: {{usuario.password}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

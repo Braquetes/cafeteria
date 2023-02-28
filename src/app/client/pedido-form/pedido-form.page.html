@@ -1,0 +1,121 @@
+<ion-header>
+  <div class="navTabs">
+    <div>
+      <ion-tab-button>
+        <ion-avatar>
+          <!-- <img src="assets/img/iniciarSesion.png" alt="iniciarSesion"> -->
+          <img src="assets/img/rostroP.png" alt="iniciarSesion">
+        </ion-avatar>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button [routerLink]="['/tabs/tab1']">
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+    </div>
+    <!-- <div>
+      <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+        <span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">1</span>
+        <ion-title>Pedidos</ion-title>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+        <ion-title>Terminado</ion-title>
+      </ion-tab-button>
+    </div> -->
+    <div [routerLink]="['/perfil']">
+      <ion-tab-button>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-tab-button>
+    </div>
+</div>
+</ion-header>
+
+<ion-content>
+  <div align="center">
+    <h3 class="tituloForm">Pedido</h3>
+  </div>
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-3">
+          <h5>Fecha pedido: </h5>
+        </div>
+        <div class="col-9">
+          <div class="input">
+            <ion-item fill="solid">
+              <ion-input type="date" class="custom"></ion-input>
+            </ion-item>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <h5>Fecha solicitada: </h5>
+        </div>
+        <div class="col-9">
+          <div class="input">
+            <ion-item fill="solid">
+              <ion-input type="date" class="custom"></ion-input>
+            </ion-item>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3" align="end">
+      <div>
+        <strong>Num: </strong>{{1}}
+      </div>
+      <div>
+        <strong>Dept. Solicita: </strong> {{depto}}
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div align="center">
+    <table class="table">
+      <thead class="table-dark" align="center">
+        <tr>
+          <th scope="col">Pedidos</th>
+          <th scope="col">Articulo</th>
+          <th scope="col">U.M</th>
+          <th colspan="3">Cantidad</th>
+          <th scope="col">Precio Unitario</th>
+          <th scope="col">Precio Total</th>
+          <th scope="col">Checar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-dark">
+          <th></th>
+          <td></td>
+          <td></td>
+          <td>Solicitada</td>
+          <td>Surtida</td>
+          <td>Existencia</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr align="center" *ngFor="let item of productos; let i = index">
+          <td>{{item.idProducto}}</td>
+          <th>{{item.producto}}</th>
+          <td>{{item.unidad_medida}}</td>
+          <td>
+            <form (ngSubmit)="miForm(form,i)" #form="ngForm">
+              <input type="number" style="background-color: transparent;" name="cantidad" [(ngModel)]="item.cantidad">
+              <button type="submit" id="{{i}}" hidden>Enviar</button>
+            </form>
+          </td>
+          <td>{{item.surtida}}</td>
+          <td>{{item.existencia}}</td>
+          <td>{{item.precio}}</td>
+          <td>{{item.total}}</td>
+          <label for="{{i}}">+</label>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- <label for="2">Enviar</label> -->
+</ion-content>

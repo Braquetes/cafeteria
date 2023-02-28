@@ -15,7 +15,7 @@
             </div>
             <form class="formulario" [formGroup]="miFormulario">
               <input type="email" class="input email" placeholder="Ingrese su correo electronico"
-                formControlName="username" [pattern]="emailCheck">
+                formControlName="email" [pattern]="emailCheck">
               <span *ngIf="emailReq()" class="form-text text-danger">Dirección de correo no válida</span>
               <span *ngIf="emailPattern()" class="form-text text-danger">Patrón incorrecto</span>
               <input type="password" class="input pass" placeholder="Ingrese su contraseña" formControlName="password">
@@ -33,8 +33,8 @@
         </div>
         <div class="col-6">
           <div class="contenedorImg">
-            <img src="assets/img/iniciarSesion.png" alt="iniciarSesion">
-            <!-- <img src="assets/img/rostro.png" alt="iniciarSesion"> -->
+            <!-- <img src="assets/img/iniciarSesion.png" alt="iniciarSesion"> -->
+            <img src="assets/img/rostro.png" alt="iniciarSesion">
           </div>
         </div>
       </div>

@@ -1,0 +1,103 @@
+<ion-header>
+  <div class="navTabs">
+    <div>
+      <ion-tab-button>
+        <ion-avatar>
+          <!-- <img src="assets/img/iniciarSesion.png" alt="iniciarSesion"> -->
+          <img src="assets/img/rostroP.png" alt="iniciarSesion">
+        </ion-avatar>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button [routerLink]="['/tabs/tab1']">
+        <!-- <ion-icon name="home-outline"></ion-icon> -->
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+    </div>
+    <!-- <div>
+      <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+        <span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">1</span>
+        <ion-title>Pedidos</ion-title>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+        <ion-title>Terminado</ion-title>
+      </ion-tab-button>
+    </div> -->
+    <div [routerLink]="['/perfil']">
+      <ion-tab-button>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-tab-button>
+    </div>
+</div>
+</ion-header>
+
+<ion-content>
+  <div align="center">
+    <h3 class="tituloForm">Control interno de salidas</h3>
+  </div>
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-3">
+          <h5>Fecha pedido: </h5>
+        </div>
+        <div class="col-9">
+          <div class="input">
+            <ion-item fill="solid">
+              <ion-input type="date" class="custom"></ion-input>
+            </ion-item>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <h5>Fecha solicitada: </h5>
+        </div>
+        <div class="col-9">
+          <div class="input">
+            <ion-item fill="solid">
+              <ion-input type="date" class="custom"></ion-input>
+            </ion-item>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3" align="end">
+      <div>
+        <strong>Num: </strong>{{1}}
+      </div>
+      <div>
+        <strong>Dept. Solicita: </strong> {{depto}}
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div align="center">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Articulo</th>
+          <th scope="col">U.M</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Precio Unitario</th>
+          <th scope="col">Precio Total</th>
+          <th scope="col">Faltante / Excedente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ion-content>

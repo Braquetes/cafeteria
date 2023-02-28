@@ -1,8 +1,12 @@
 ion-label {
-    font-size: xx-large;
+    font-size: large;
     background-color: black;
     color: white;
     padding-top: 15px;
+}
+
+ion-title {
+    color: white !important;
 }
 
 ion-tab-bar {
@@ -14,7 +18,7 @@ ion-tab-button {
 }
 
 ion-icon {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 ion-avatar, img {
@@ -26,16 +30,22 @@ ion-avatar, img {
 }
 
 ion-card {
-    // background-color: black;
-    // color: white;
+    background-color: black;
     border-radius: 30px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     height: 100%;
-    }
-
-ion-card:hover {
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+ion-card-title{
+    color: white;
+}
+
+// ion-card:hover {
+//     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+// }
 
 ion-text{
     color: black;
@@ -55,6 +65,7 @@ hr {
 .cardV {
     // display: flex;
     // align-items: center;
+    // background-color: black;
 }
 
 .cardT {
@@ -64,8 +75,8 @@ hr {
 .contenedor {
     // background-color: wheat;
     // border: 1px solid;
-    width: min(100% - 1em, 60em);
-    height: min(100%);
+    width: min(100% - 1em, 70em);
+    height: min(60%);
     margin-inline: auto;
     display: grid;
     align-items: center;
@@ -76,7 +87,7 @@ hr {
 #cart_menu_num {
     position: absolute;
     top: 0;
-    left: 55%;
+    left: 90%;
     background: red;
     width: 20px;
     height: 20px;

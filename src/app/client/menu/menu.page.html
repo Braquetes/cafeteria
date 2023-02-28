@@ -1,0 +1,60 @@
+<ion-header>
+  <div class="navTabs">
+    <div>
+      <ion-tab-button>
+        <ion-avatar>
+          <!-- <img src="assets/img/iniciarSesion.png" alt="iniciarSesion"> -->
+          <img src="assets/img/rostroP.png" alt="iniciarSesion">
+        </ion-avatar>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button [routerLink]="['/tabs/tab1']">
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+    </div>
+    <!-- <div>
+      <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+        <span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">1</span>
+        <ion-title>Pedidos</ion-title>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+        <ion-title>Terminado</ion-title>
+      </ion-tab-button>
+    </div> -->
+    <div [routerLink]="['/perfil']">
+      <ion-tab-button>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-tab-button>
+    </div>
+</div>
+</ion-header>
+
+<ion-content>
+  <div align="center">
+    <ion-text>Opciones</ion-text>
+    <hr>
+  </div>
+  <div class="container-fluid contenedor">
+    <div class="col-12">
+      <div class="row" align="center">
+        <div class="col-6 cardV">
+          <ion-card (click)="pedido()">
+            <ion-card-header>
+              <ion-card-title class="cardT">Solicitud de materia prima</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </div>
+        <div class="col-6 cardV">
+          <ion-card (click)="terminado()">
+            <ion-card-header>
+              <ion-card-title class="cardT">Producto terminado</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

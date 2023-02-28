@@ -31,7 +31,7 @@
               </div>
 
               <div>
-                <input type="email" formControlName="username" class="email" placeholder="Correo electronico del usuario"
+                <input type="email" formControlName="email" class="email" placeholder="Correo electronico del usuario"
                   [pattern]="emailCheck">
                 <span *ngIf="emailReq()" class="form-text text-danger">Dirección de correo no válida</span>
                 <span *ngIf="emailPattern()" class="form-text text-danger">Patrón incorrecto</span>

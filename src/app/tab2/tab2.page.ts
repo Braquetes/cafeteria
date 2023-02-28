@@ -18,12 +18,12 @@ export class Tab2Page {
 
   notificacion = [
     {
-      titulo: 'Fecha de pago',
+      titulo: 'MASA-MAMI hizo un pedido',
       descripcion: '',
       fecha: 1673745180000
     },
     {
-      titulo: 'Tu pago fue validado',
+      titulo: 'BruFinca hizo un pedido',
       descripcion: '',
       fecha: 1673745180000
 

@@ -2,29 +2,19 @@ ion-tab-bar {
     background-color: black;
 }
 
+ion-label {
+    font-size: large;
+    background-color: black;
+    color: white;
+    padding-top: 15px;
+}
+
 ion-tab-button {
     background-color: black;
 }
 
 ion-icon {
-    font-size: 50px;
-}
-
-// Numero  
-#cart_menu_num {
-    position: absolute;
-    top: 0;
-    left: 55%;
-    background: red;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding: 1px;
-    font-size: 15px;
+    font-size: 30px;
 }
 
 h3 {
@@ -35,4 +25,30 @@ h3 {
 
 p {
     font-size: x-large;
+}
+
+.navTabs {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    grid-auto-rows: 6rem;
+    align-items: center;
+    justify-items: center;
+}
+
+// Numero  
+#cart_menu_num {
+    position: absolute;
+    top: 0;
+    left: 90%;
+    background: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1px;
+    font-size: 15px;
 }

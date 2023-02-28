@@ -1,39 +1,40 @@
 <ion-header>
-  <ion-tab-bar>
-    <ion-tab-button tab="tab1">
-      <ion-icon name="home-outline"></ion-icon>
-    </ion-tab-button>
-
-    <ion-tab-button tab="tab2">
-      <ion-icon name="notifications-outline"></ion-icon>
-      <span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">1</span>
-    </ion-tab-button>
-
-    <ion-tab-button tab="tab3">
-      <ion-icon name="person-outline"></ion-icon>
-    </ion-tab-button>
-  </ion-tab-bar>
+  <div class="navTabs">
+    <div>
+      <ion-tab-button>
+        <ion-avatar>
+          <!-- <img src="assets/img/iniciarSesion.png" alt="iniciarSesion"> -->
+          <img src="assets/img/rostroP.png" alt="iniciarSesion">
+        </ion-avatar>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab1">
+        <!-- <ion-icon name="home-outline"></ion-icon> -->
+        <ion-title>Inicio</ion-title>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab2">
+        <!-- <ion-icon name="notifications-outline"></ion-icon> -->
+        <span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">1</span>
+        <ion-title>Pedidos</ion-title>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab3">
+        <!-- <ion-icon name="person-outline"></ion-icon> -->
+        <ion-title>Terminado</ion-title>
+      </ion-tab-button>
+    </div>
+    <div [routerLink]="['/perfil']">
+      <ion-tab-button>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-tab-button>
+    </div>
+</div>
 </ion-header>
 
 <ion-content>
-  <div class="contenedor">
-    <h1>Perfil</h1>
-    <div class="col-12">
-      <div class="row">
-        <div class="col-3">
-          <img src="assets/img/user.png" alt="ser" class="img">
-        </div>
-        <div class="col-9">
-            <div class="grid">
-              <div>Nombre: {{usuario.nombres}}</div>
-              <div>Apellidos: {{usuario.apellidos}}</div>
-              <div>Correo: {{usuario.username}}</div>
-              <div>Contraseña: {{usuario.password}}</div>
-              <div>Telefono: {{usuario.telefono}}</div>
-              <div>Edad: {{usuario.edad}}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </ion-content>

@@ -1,22 +1,44 @@
 <ion-header>
-  <ion-tab-bar>
-    <ion-tab-button tab="tab1">
-      <ion-icon name="home-outline"></ion-icon>
-    </ion-tab-button>
-
-    <ion-tab-button tab="tab2">
-      <ion-icon name="notifications-outline"></ion-icon>
-      <span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">1</span>
-    </ion-tab-button>
-
-    <ion-tab-button tab="tab3">
-      <ion-icon name="person-outline"></ion-icon>
-    </ion-tab-button>
-  </ion-tab-bar>
+  <div class="navTabs">
+    <div>
+      <ion-tab-button>
+        <ion-avatar>
+          <!-- <img src="assets/img/iniciarSesion.png" alt="iniciarSesion"> -->
+          <img src="assets/img/rostroP.png" alt="iniciarSesion">
+        </ion-avatar>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab1">
+        <!-- <ion-icon name="home-outline"></ion-icon> -->
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab2">
+        <!-- <ion-icon name="notifications-outline"></ion-icon> -->
+        <span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">1</span>
+        <ion-title>Pedidos</ion-title>
+      </ion-tab-button>
+    </div>
+    <div>
+      <ion-tab-button tab="tab3">
+        <!-- <ion-icon name="person-outline"></ion-icon> -->
+        <ion-title>Terminado</ion-title>
+      </ion-tab-button>
+    </div>
+    <div [routerLink]="['/perfil']">
+      <ion-tab-button>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-tab-button>
+    </div>
+</div>
 </ion-header>
 
 <ion-content>
-  <h1>Notificaciones</h1>
+  <div align="center">
+    <h1>Pedidos</h1>
+  </div>
   <!-- <br> -->
   <ion-item button detail="true" *ngFor="let n of notificacion">
     <ion-label>

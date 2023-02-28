@@ -14,24 +14,7 @@ ion-tab-button {
 }
 
 ion-icon {
-    font-size: 50px;
-}
-
-// Numero  
-#cart_menu_num {
-    position: absolute;
-    top: 0;
-    left: 55%;
-    background: red;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding: 1px;
-    font-size: 15px;
+    font-size: 30px;
 }
 
 .contenedor {
@@ -70,4 +53,30 @@ h5 {
     grid-auto-rows: 6rem;
     align-items: center;
     justify-items: left;
+}
+
+.navTabs {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    grid-auto-rows: 6rem;
+    align-items: center;
+    justify-items: center;
+}
+
+// Numero  
+#cart_menu_num {
+    position: absolute;
+    top: 0;
+    left: 90%;
+    background: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1px;
+    font-size: 15px;
 }
